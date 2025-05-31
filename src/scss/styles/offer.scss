@@ -1,0 +1,51 @@
+.price-repair {
+  &__offer {
+    max-width: 421px;
+    min-height: 60px;
+    margin: 0 0 40px 16px;
+  }
+
+  &__offer-item {
+    max-width: 421px;
+    font: 14px/20px $font-family_4;
+    margin: 0 0 16px 6px;
+  }
+
+  .offer-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__offer-btn {
+    font: 500 16px/24px $font-family_3;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 40px 0 0;
+    position: relative;
+    text-align: left;
+    margin-left: 6px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 55%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 28px;
+      background: url("data:image/svg+xml,%3Csvg width='24' height='28' viewBox='0 0 24 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.1625 17.6041C8.83819 17.9796 8.83819 18.536 9.1625 18.9115L9.29432 19.0641C9.69317 19.5258 10.409 19.5258 10.8078 19.0641L14.8372 14.3994C15.1615 14.0239 15.1615 13.4675 14.8372 13.092L10.8078 8.42728C10.409 7.96553 9.69317 7.96553 9.29432 8.42728L9.1625 8.57988C8.83819 8.95533 8.83819 9.5118 9.1625 9.88726L12.4954 13.7457L9.1625 17.6041Z' fill='%23FF3E79'/%3E%3C/svg%3E%0A") no-repeat;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      &::after {
+        transform: translate(4px, -50%);
+      }
+    }
+  }
+}

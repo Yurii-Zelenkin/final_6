@@ -1,0 +1,56 @@
+$bgColor: #24292e;
+$fff: #ffffff;
+$eae: #eaeaea;
+$f8f: #f8f8f8;
+$a41f: #41f6d7;
+$b8f: #b8ffec;
+$a7e7: #7e7e82;
+$b5b: #b5b6bc;
+$d9f: #d9fff5;
+$ff3: #ff3e79;
+
+$font-family_1: 'TTLakes-Regular', sans-serif;
+$font-family_2: 'TTLakes-Bolt';
+$font-family_3: 'TTLakes-Medium';
+$font-family_4: 'TTLakes-Regular';
+
+body {
+  font-family: $font-family_1;
+}
+
+@font-face {
+  font-family: 'TTLakes-Regular';
+  src: url('../fonts/TTLakes-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../fonts/TTLakes-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTLakes-Bolt';
+  src: url(../fonts/TTLakes-Bold.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @import '/src/scss/reset';
+@import 'scss-reset';
+@import 'styles/style1';
+@import 'styles/slider-menu';
+@import 'styles/swiper1';
+@import 'styles/swiper2';
+@import 'styles/swiper3';
+@import 'styles/offer';
+@import 'styles/foter';
+@import 'styles/aside';
+@import 'styles/swiper-bundle.min.css';
+@import 'modal.scss';

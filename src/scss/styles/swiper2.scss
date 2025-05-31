@@ -1,0 +1,148 @@
+.technic-repair {
+  &__header-container {
+    background: $f8f;
+    border-top: 1px solid $d9f;
+  }
+
+  &__title {
+    padding: 16px;
+    font-family: $font-family_4;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $a7e7;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+
+    @media (min-width: 768px) {
+      padding-left: 24px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    height: 234px;
+    overflow: hidden;
+    background: $f8f;
+
+    @media (min-width: 768px) {
+      height: auto;
+      padding-bottom: 0;
+    }
+  }
+
+  &__slide {
+    img {
+      display: block;
+      width: 240px;
+      height: 160px;
+      margin: 16px 0 0 16px;
+      object-fit: contain;
+
+      @media (min-width: 768px) {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 160px;
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: 224px !important;
+      height: 160px !important;
+      margin: 0 !important;
+
+      a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 224px);
+      gap: 16px 24px;
+      max-height: 184px;
+      overflow: hidden;
+      margin: 24px 0 0 24px;
+
+      &.expanded {
+        max-height: 2000px;
+        margin-bottom: 16px;
+      }
+
+      @media (min-width: 1120px) {
+        grid-template-columns: repeat(4, 240px);
+        gap: 24px 32px;
+        margin-left: 32px;
+
+        .technic-repair__slide:nth-child(n + 4) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @media (min-width: 768px) {
+      display: block;
+      margin: 23px 0 34px 24px;
+      padding-left: 32px;
+      background: none;
+      border: none;
+      font-family: $font-family_3;
+      cursor: pointer;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A") no-repeat center;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.swiper-pagination-technic {
+  padding-bottom: 16px;
+
+  .swiper-pagination-bullet {
+    background: $b5b;
+    width: 12px;
+    height: 12px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &-active {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.technic-repair__wrapper.expanded .technic-repair__slide {
+  display: block !important;
+}
+
+.technic-repair__slider.expanded .technic-repair__btn::before {
+  transform: translateY(-50%) rotate(180deg);
+}
