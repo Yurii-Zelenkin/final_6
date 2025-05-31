@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './'
+    publicPath: '/final_6/'
   },
   devtool: 'source-map',
   module: {
@@ -44,7 +44,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'fonts/',
-              publicPath: '../fonts/' // Путь относительно CSS-файла
+              publicPath: '/final_6/fonts/'
             }
           }
         ]
@@ -86,6 +86,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/modal'),
           to: path.resolve(__dirname, 'dist/modal')
+        },
+        {
+          from: path.resolve(__dirname, 'src/fonts'),
+          to: path.resolve(__dirname, 'dist/fonts')
         }
       ]
     })
