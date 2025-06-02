@@ -18,7 +18,8 @@
     "deploy": "gh-pages -d dist",
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "watch": "webpack --mode development --watch"
+    "watch": "webpack --mode development --watch",
+    "copy-to-docs": "rimraf docs && mkdir docs && xcopy /E /I /Y dist\\* docs\\"
   },
   "browserslist": [
     "last 2 versions",
@@ -42,6 +43,7 @@
     "postcss-loader": "3.0.0",
     "postcss-modules-scope": "^3.2.1",
     "postcss-modules-values": "^4.0.0",
+    "rimraf": "^3.0.2",
     "sass-loader": "^10.1.1",
     "scss-reset": "^1.4.6",
     "style-loader": "^1.3.0",
