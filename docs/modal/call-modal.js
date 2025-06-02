@@ -1,5 +1,5 @@
 export function initCallModal() {
-  const callButtons = document.querySelectorAll('.price-repair__desktop-btn, .header__repair-btn');
+  const callButtons = document.querySelectorAll('.price-repair__desktop-btn, .header__repair-btn, .card__time-button');
   const modalCall = document.querySelector('.modal-call');
   
   if (!modalCall) {
